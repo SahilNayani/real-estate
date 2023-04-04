@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate</title>    
+    <!-- Aos Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- Style -->
+    <link rel="stylesheet" href="assest/css/style.css" />
+  </head>
+
+  <body class="w-full bg-offwhite overflow-x-hidden">
+    <header class="relative" aria-label="Site Header">
+      <div class="flex items-center max-w-screen-2xl mx-auto px-5 py-5 lg:py-8">
+        <a class="block text-teal-600" href="index.html">
+          <img src="assest/images/svg/logo.svg" class="h-9 md:h-14" alt="logo"/>
+        </a>
+        <div class="flex items-center ml-auto space-x-4">
+          <nav aria-label="Site Nav" id="navbar" class="absolute lg:relative top-full inset-x-0 hidden lg:block bg-offwhite lg:bg-transparent z-50 shadow-md lg:shadow-none">
+            <ul class="flex flex-col lg:flex-row items-center space-y-2 lg:space-y-0 lg:space-x-4 py-2 lg:py-0">
+              <li><a class="block text-base xl:text-lg text-navyblue font-inter px-5 xl:px-6 py-2 rounded-full hover:bg-sky hover:text-white anim" href="#">Properties</a></li>
+              <li><a class="block text-base xl:text-lg text-navyblue font-inter px-5 xl:px-6 py-2 rounded-full hover:bg-sky hover:text-white anim" href="#">How it Works</a></li>
+              <li><a class="block text-base xl:text-lg text-navyblue font-inter px-5 xl:px-6 py-2 rounded-full hover:bg-sky hover:text-white anim" href="#">About Us</a></li>
+              <li><a class="block text-base xl:text-lg text-navyblue font-inter px-5 xl:px-6 py-2 rounded-full hover:bg-sky hover:text-white anim" href="#">Invest Now</a></li>
+            </ul>
+          </nav>
+          <div class="flex items-center gap-4">
+            <div class="sm:flex">
+              <a class="block lg:font-normal text-sm lg:text-base xl:text-xl font-inter rounded px-3 py-1.5 bg-sky text-white border border-sky lg:text-navyblue lg:bg-transparent lg:border-transparent lg:px-5 xl:px-6 lg:py-2 lg:rounded-full lg:hover:bg-sky lg:hover:text-white anim" href="index.html"> Login </a>
+            </div>
+            <button class="block lg:hidden" onclick="toggleClass('#navbar', 'hidden')">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Section One -->
+    <section class="relative z-10">
+      <div class="relative max-w-screen-cont mx-auto">
+        <div class="max-w-screen-2xl mx-auto flex flex-wrap items-center md:absolute inset-0">
+          <div class="w-full md:w-7/12 px-5 py-14">
+            <div class="space-y-6 lg:space-y-10 text-center md:text-left">
+              <h1 class="font-dm" data-aos="fade-right">We changed <span class="text-sky" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500">Real Estate</span> forever.</h1>
+              <p class="font-pbsans text-base lg:text-xl 2xl:text-2xl 2xl:pr-10" data-aos="fade-right" data-aos-duration="1000">Doesn't matter if you want to invest 10,000 or 10,00,000. We offer solutions tailor made specifically for your needs</p>
+              <a href="#" class="btn-primary 2xl:text-3xl" data-aos="fade-right" data-aos-duration="1500">View Investment Options</a>
+            </div>
+          </div>
+        </div>
+        <div class="w-full md:w-1/2 lg:w-5/12 ml-auto pl-5 lg:pl-0">
+          <div class="relative -mb-5 lg:-mb-10">
+            <img src="assest/images/home/img-01.png" class="max-w-3xl w-full ml-auto" alt="Image 1" data-aos="fade-left" data-aos-duration="1500" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Two -->
+    <section class="relative overflow-x-hidden py-10 lg:py-14 xl:py-24 2xl:py-36 overflow-hidden bg-white">
+      <div class="relative max-w-screen-cont mx-auto">
+        <div class="max-w-screen-2xl mx-auto flex flex-wrap items-center">
+          <div class="w-full md:w-7/12 px-5 py-7 ml-auto">
+            <div class="flex flex-wrap max-w-3xl mr-auto pt-8 lg:pt-20">
+              <div class="title w-full mb-3">
+                <h6 class="font-pbsans flex items-center space-x-3 text-xl text-sky"><img src="assest/images/icon/title-icon.png" data-aos="zoom-in" /> <span data-aos="fade-left">MORE ABOUT US</span></h6>
+                <h4 class="font-dm" data-aos="fade-left">Why <span class="text-sky" data-aos="fade-up">Real2GajZameen?</span></h4>
+              </div>
+              <div class="w-1/2 flex flex-col items-start py-3 lg:py-5 pr-3 space-y-2" data-aos-duration="500" data-aos="fade-up">
+                <img class="w-14 lg:w-16 2xl:w-24" src="assest/images/icon/heand.svg" alt="" />
+                <p>Simple. Easy. Online</p>
+              </div>
+              <div class="w-1/2 flex flex-col items-start py-3 lg:py-5 pr-3 space-y-2" data-aos-duration="700" data-aos="fade-up">
+                <img class="w-14 lg:w-16 2xl:w-24" src="assest/images/icon/Investments-mony.svg" alt="Investments-mony" />
+                <p>Investments that start at 10k</p>
+              </div>
+              <div class="w-1/2 flex flex-col items-start py-3 lg:py-5 pr-3 space-y-2" data-aos-duration="900" data-aos="fade-up">
+                <img class="w-14 lg:w-16 2xl:w-24" src="assest/images/icon/high-liquidity.svg" alt="high-liquidity" />
+                <p>High liquidity</p>
+              </div>
+              <div class="w-1/2 flex flex-col items-start py-3 lg:py-5 pr-3 space-y-2" data-aos-duration="1100" data-aos="fade-up">
+                <img class="w-14 lg:w-16 2xl:w-24" src="assest/images/icon/search-mony.svg" alt="search-mony" />
+                <p>Transparency like never before</p>
+              </div>
+              <div class="w-1/2 flex flex-col items-start py-3 lg:py-5 pr-3 space-y-2" data-aos-duration="1300" data-aos="fade-up">
+                <img class="w-14 lg:w-16 2xl:w-24" src="assest/images/icon/mony-protected.svg" alt="mony-protected" />
+                <p>Your investment is protected</p>
+              </div>
+              <div class="w-1/2 flex flex-col items-start py-3 lg:py-5 pr-3 space-y-2" data-aos-duration="1500" data-aos="fade-up">
+                <a href="#" class="btn-primary mt-auto rounded-md">Know More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-full md:w-5/12 mr-auto md:absolute inset-0 flex items-center">
+          <div class="relative z-20">
+            <img src="assest/images/home/img-02.png" class="max-w-3xl w-full -ml-10" alt="Image 2" data-aos="fade-right" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Three -->
+    <section class="relative overflow-x-hidden py-10 lg:py-14 xl:py-24 2xl:py-36 overflow-hidden">
+      <div class="relative max-w-screen-cont mx-auto">
+        <div class="max-w-screen-2xl mx-auto flex flex-wrap items-center">
+          <div class="w-full md:w-7/12 px-5 py-7 mr-auto">
+            <div class="flex flex-wrap max-w-3xl ml-auto">
+              <div class="title w-full mb-5">
+                <h6 class="font-pbsans flex items-center space-x-3 text-xl text-sky"><img src="assest/images/icon/title-icon.png" data-aos="zoom-in" /> <span data-aos="fade-left">MORE ABOUT US</span></h6>
+                <h4 class="font-dm" data-aos="fade-left">Why <span class="text-sky" data-aos="fade-up">Commercial</span> Real Estate?</h4>
+              </div>
+              <div class="w-1/2 flex flex-col items-start py-3 lg:py-5 pr-3 space-y-2" data-aos-duration="500" data-aos="fade-up">
+                <img class="w-14 lg:w-16 2xl:w-24" src="assest/images/icon/returns-fds.svg" alt="returns-fds" />
+                <p>Better returns than FDs</p>
+                <div class="flex flex-row space-x-1 md:space-x-5">
+                  <p class="text-sm xl:text-base">FD <b>6.6%</b></p>
+                  <p class="text-sm xl:text-base flex items-start">CRE <span class="text-base md:text-xl lg:text-2xl font-semibold inline-block pl-2">8-12%</span></p>
+                </div>
+              </div>
+              <div class="w-1/2 flex flex-col items-start py-3 lg:py-5 pr-3 space-y-2" data-aos-duration="700" data-aos="fade-up">
+                <img class="w-14 lg:w-16 2xl:w-24" src="assest/images/icon/date-returns.svg" alt="date-returns" />
+                <p>Fixed monthly returns</p>
+              </div>
+              <div class="w-1/2 flex flex-col items-start py-3 lg:py-5 pr-3 space-y-2" data-aos-duration="900" data-aos="fade-up">
+                <img class="w-14 lg:w-16 2xl:w-24" src="assest/images/icon/recipe-wealth.svg" alt="recipe-wealth" />
+                <p>Recipe for wealth creation</p>
+              </div>
+              <div class="w-1/2 flex flex-col items-start py-3 lg:py-5 pr-3 space-y-2" data-aos-duration="1100" data-aos="fade-up">
+                <img class="w-14 lg:w-16 2xl:w-24" src="assest/images/icon/search-mony.svg" alt="search-mony" />
+                <p>Portfolio diversification</p>
+              </div>
+              <div class="w-1/2 flex flex-col items-start py-3 lg:py-5 pr-3 space-y-2" data-aos-duration="1300" data-aos="fade-up">
+                <img class="w-14 lg:w-16 2xl:w-24" src="assest/images/icon/stable.svg" alt="stable" />
+                <p>Stable</p>
+              </div>
+              <div class="w-1/2 flex flex-col items-start py-3 lg:py-5 pr-3 space-y-2" data-aos-duration="1500" data-aos="fade-up">
+                <a href="#" class="btn-primary mt-auto rounded-md">Know More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-full md:w-5/12 ml-auto md:absolute inset-0 flex items-center">
+          <div class="relative z-20 ml-auto">
+            <img src="assest/images/home/img-03.png" class="max-w-3xl w-full -mr-10 ml-auto" alt="Image 3" data-aos="fade-left" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section four -->
+    <section class="relative overflow-x-hidden py-10 lg:py-14 xl:py-24 2xl:py-36 overflow-hidden bg-white">
+      <div class="relative max-w-screen-cont mx-auto">
+        <div class="max-w-screen-2xl mx-auto flex flex-wrap items-center xl:pb-20">
+          <div class="w-full md:w-7/12 px-5 py-7 ml-auto">
+            <div class="flex flex-wrap max-w-3xl mr-auto">
+              <div class="title w-full mb-3">
+                <h6 class="font-pbsans flex items-center space-x-3 text-xl text-sky"><img src="assest/images/icon/title-icon.png" data-aos="zoom-in" /> <span data-aos="fade-left">MORE ABOUT US</span></h6>
+                <h4 class="font-dm" data-aos="fade-left">How it <span class="text-sky" data-aos="fade-up">Works</span>?</h4>
+              </div>
+              <div class="w-1/2 flex flex-col items-start py-3 lg:py-5 pr-3 space-y-2" data-aos-duration="500" data-aos="fade-up">
+                <img class="w-14 lg:w-16 2xl:w-24" src="assest/images/icon/heand.svg" alt="" />
+                <p>High quality, curated assets</p>
+              </div>
+              <div class="w-1/2 flex flex-col items-start py-3 lg:py-5 pr-3 space-y-2" data-aos-duration="700" data-aos="fade-up">
+                <img class="w-14 lg:w-16 2xl:w-24" src="assest/images/icon/search-mony.svg" alt="search-mony" />
+                <p>Reliable earnings, sustained growth</p>
+              </div>
+              <div class="w-1/2 flex flex-col items-start py-3 lg:py-5 pr-3 space-y-2" data-aos-duration="900" data-aos="fade-up">
+                <img class="w-14 lg:w-16 2xl:w-24" src="assest/images/icon/stable.svg" alt="stable" />
+                <p>Low costs through smart tech</p>
+              </div>
+              <div class="w-1/2 flex flex-col items-start py-3 lg:py-5 pr-3 space-y-2" data-aos-duration="1100" data-aos="fade-up">
+                <img class="w-14 lg:w-16 2xl:w-24" src="assest/images/icon/returns-fds.svg" alt="returns-fds" />
+                <p>Hassle free real estate</p>
+              </div>
+              <div class="w-1/2 flex flex-col items-start py-3 lg:py-5 pr-3 space-y-2" data-aos-duration="1300" data-aos="fade-up">
+                <a href="#" class="btn-primary mt-auto rounded-md">Know More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-full md:w-5/12 mr-auto md:absolute inset-0 flex items-center pb-20 md:pb-0">
+          <div class="relative z-20">
+            <img src="assest/images/home/img-04.png" class="max-w-3xl w-full -ml-10" alt="Image 4" data-aos="fade-right" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section five -->
+    <section class="relative bg-ligthoffgray">
+      <div class="max-w-screen-cont mx-auto flex items-center flex-wrap">
+        <div class="w-full md:w-1/2 lg:w-5/12">
+          <img src="assest/images/home/img-05.png" class="max-w-3xl w-full -mt-11 lg:-mt-10 2xl:-mt-20 relative z-10" alt="Image 5" data-aos="fade-up" />
+        </div>
+        <div class="w-full md:w-1/2 lg:w-7/12 px-5 py-10 lg:py-12 xl:py-20 ml-auto">
+          <div class="max-w-[700px] space-y-5 text-center md:text-left">
+            <h3 class="text-4xl md:text-3xl lg:text-4xl 2xl:text-64" data-aos="fade-left">Start Your Investment Journey</h2>
+            <a href="#" class="btn-primary mt-auto rounded-md" data-aos="fade-left">Explore Options</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <footer class="relative bg-navyblue pb-28 pt-10 lg:py-12 2xl:py-16">
+      <div class="max-w-screen-2xl mx-auto px-5">
+        <div class="flex flex-wrap -mx-2 sm:-mx-3">
+          <div class="w-full lg:w-3/12 pb-7 p-2 sm:p-3">
+            <a class="block text-teal-600" href="javascrip:void(0)">
+              <img src="assest/images/svg/light-logo.svg" class="h-9 md:h-14 mx-auto md:ml-0" alt="Footer-logo"/>
+            </a>
+            <div class="absolute text-center w-full lg:text-left lg:relative bottom-0 inset-x-0 p-5 lg:p-0">
+              <div class="flex items-center justify-center lg:justify-start space-x-3 mt-8 md:mt-12">
+                <a href="javascript:void(0)" class="text-white hover:text-sky anim">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 md:w-8 md:h-8" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M420 36H92a56 56 0 0 0-56 56v328a56 56 0 0 0 56 56h160.67V292.924h-36.615v-73.23h36.312V186.6c0-29.952 14.268-76.746 77.059-76.746l56.565.227v62.741h-41.078c-6.679 0-16.183 3.326-16.183 17.592v29.285h58.195l-6.68 73.23H325.9V476H420a56 56 0 0 0 56-56V92a56 56 0 0 0-56-56z" class="fill-current" data-original="#000000" class=""></path></g></svg>
+                </a>
+                <a href="javascript:void(0)" class="text-white hover:text-sky anim">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 md:w-8 md:h-8" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M512 97.248c-19.04 8.352-39.328 13.888-60.48 16.576 21.76-12.992 38.368-33.408 46.176-58.016-20.288 12.096-42.688 20.64-66.56 25.408C411.872 60.704 384.416 48 354.464 48c-58.112 0-104.896 47.168-104.896 104.992 0 8.32.704 16.32 2.432 23.936-87.264-4.256-164.48-46.08-216.352-109.792-9.056 15.712-14.368 33.696-14.368 53.056 0 36.352 18.72 68.576 46.624 87.232-16.864-.32-33.408-5.216-47.424-12.928v1.152c0 51.008 36.384 93.376 84.096 103.136-8.544 2.336-17.856 3.456-27.52 3.456-6.72 0-13.504-.384-19.872-1.792 13.6 41.568 52.192 72.128 98.08 73.12-35.712 27.936-81.056 44.768-130.144 44.768-8.608 0-16.864-.384-25.12-1.44C46.496 446.88 101.6 464 161.024 464c193.152 0 298.752-160 298.752-298.688 0-4.64-.16-9.12-.384-13.568 20.832-14.784 38.336-33.248 52.608-54.496z" class="fill-current" data-original="#000000" class=""></path></g></svg>
+                </a>
+                <a href="javascript:void(0)" class="text-white hover:text-sky anim">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 md:w-8 md:h-8" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 510 510" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M459 0H51C22.95 0 0 22.95 0 51v408c0 28.05 22.95 51 51 51h408c28.05 0 51-22.95 51-51V51c0-28.05-22.95-51-51-51zM153 433.5H76.5V204H153v229.5zm-38.25-272.85c-25.5 0-45.9-20.4-45.9-45.9s20.4-45.9 45.9-45.9 45.9 20.4 45.9 45.9-20.4 45.9-45.9 45.9zM433.5 433.5H357V298.35c0-20.399-17.85-38.25-38.25-38.25s-38.25 17.851-38.25 38.25V433.5H204V204h76.5v30.6c12.75-20.4 40.8-35.7 63.75-35.7 48.45 0 89.25 40.8 89.25 89.25V433.5z" class="fill-current" data-original="#000000" class=""></path></g></svg>
+                </a>
+                <a href="javascript:void(0)" class="text-white hover:text-sky anim">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 md:w-8 md:h-8" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 511 511.9" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M510.95 150.5c-1.2-27.2-5.598-45.898-11.9-62.102-6.5-17.199-16.5-32.597-29.6-45.398-12.802-13-28.302-23.102-45.302-29.5-16.296-6.3-34.898-10.7-62.097-11.898C334.648.3 325.949 0 256.449 0s-78.199.3-105.5 1.5c-27.199 1.2-45.898 5.602-62.097 11.898-17.204 6.5-32.602 16.5-45.403 29.602-13 12.8-23.097 28.3-29.5 45.3-6.3 16.302-10.699 34.9-11.898 62.098C.75 177.801.449 186.5.449 256s.301 78.2 1.5 105.5c1.2 27.2 5.602 45.898 11.903 62.102 6.5 17.199 16.597 32.597 29.597 45.398 12.801 13 28.301 23.102 45.301 29.5 16.3 6.3 34.898 10.7 62.102 11.898 27.296 1.204 36 1.5 105.5 1.5s78.199-.296 105.5-1.5c27.199-1.199 45.898-5.597 62.097-11.898a130.934 130.934 0 0 0 74.903-74.898c6.296-16.301 10.699-34.903 11.898-62.102 1.2-27.3 1.5-36 1.5-105.5s-.102-78.2-1.3-105.5zm-46.098 209c-1.102 25-5.301 38.5-8.801 47.5-8.602 22.3-26.301 40-48.602 48.602-9 3.5-22.597 7.699-47.5 8.796-27 1.204-35.097 1.5-103.398 1.5s-76.5-.296-103.403-1.5c-25-1.097-38.5-5.296-47.5-8.796C94.551 451.5 84.45 445 76.25 436.5c-8.5-8.3-15-18.3-19.102-29.398-3.5-9-7.699-22.602-8.796-47.5-1.204-27-1.5-35.102-1.5-103.403s.296-76.5 1.5-103.398c1.097-25 5.296-38.5 8.796-47.5C61.25 94.199 67.75 84.1 76.352 75.898c8.296-8.5 18.296-15 29.398-19.097 9-3.5 22.602-7.7 47.5-8.801 27-1.2 35.102-1.5 103.398-1.5 68.403 0 76.5.3 103.403 1.5 25 1.102 38.5 5.3 47.5 8.8 11.097 4.098 21.199 10.598 29.398 19.098 8.5 8.301 15 18.301 19.102 29.403 3.5 9 7.699 22.597 8.8 47.5 1.2 27 1.5 35.097 1.5 103.398s-.3 76.301-1.5 103.301zm0 0" class="fill-current" data-original="#000000" class=""></path><path d="M256.45 124.5c-72.598 0-131.5 58.898-131.5 131.5s58.902 131.5 131.5 131.5c72.6 0 131.5-58.898 131.5-131.5s-58.9-131.5-131.5-131.5zm0 216.8c-47.098 0-85.302-38.198-85.302-85.3s38.204-85.3 85.301-85.3c47.102 0 85.301 38.198 85.301 85.3s-38.2 85.3-85.3 85.3zM423.852 119.3c0 16.954-13.747 30.7-30.704 30.7-16.953 0-30.699-13.746-30.699-30.7 0-16.956 13.746-30.698 30.7-30.698 16.956 0 30.703 13.742 30.703 30.699zm0 0" class="fill-current" data-original="#000000" class=""></path></g></svg>
+                </a>
+              </div>
+              <span class="block text-sm md:text-base text-white font-primary mt-4 md:mt-6">© 2023 2GZ</span>
+            </div>
+          </div>
+          <div class="w-1/2 md:w-1/4 lg:w-2/12 p-2 sm:p-3">
+            <h5 class="font-dm text-sky font-normal">Company</h5>
+            <div class="space-y-1 mt-2 md:mt-3">
+              <a href="javascript:void(0)" class="text-xs sm:text-sm lg:text-base text-white block">About Us</a>
+              <a href="javascript:void(0)" class="text-xs sm:text-sm lg:text-base text-white block">Contact</a>
+              <a href="javascript:void(0)" class="text-xs sm:text-sm lg:text-base text-white block">Partner with Us</a>
+              <a href="javascript:void(0)" class="text-xs sm:text-sm lg:text-base text-white block">Blog</a>
+              <a href="javascript:void(0)" class="text-xs sm:text-sm lg:text-base text-white block">Careers</a>
+            </div>
+          </div>
+          <div class="w-1/2 md:w-1/4 lg:w-2/12 p-2 sm:p-3">
+            <h5 class="font-dm text-sky font-normal">Invest</h5>
+            <div class="space-y-1 mt-2 md:mt-3">
+              <a href="javascript:void(0)" class="text-xs sm:text-sm lg:text-base text-white block">Commercial</a>
+              <a href="javascript:void(0)" class="text-xs sm:text-sm lg:text-base text-white block">Shops</a>
+            </div>
+          </div>
+          <div class="w-1/2 md:w-1/4 lg:w-3/12 p-2 sm:p-3">
+            <h5 class="font-dm text-sky font-normal">Policies</h5>
+            <div class="space-y-1 mt-2 md:mt-3">
+              <a href="javascript:void(0)" class="text-xs sm:text-sm lg:text-base text-white block">Privacy Policy</a>
+              <a href="javascript:void(0)" class="text-xs sm:text-sm lg:text-base text-white block">Terms and Conditions</a>
+              <a href="javascript:void(0)" class="text-xs sm:text-sm lg:text-base text-white block">Notice of Privacy Practices</a>
+            </div>
+          </div>          
+          <div class="w-1/2 md:w-1/4 lg:w-2/12 p-2 sm:p-3">
+            <h5 class="font-dm text-sky font-normal">Contact Us</h5>
+            <div class="space-y-1 mt-2 md:mt-3">
+              <a href="javascript:void(0)" class="text-xs sm:text-sm lg:text-base text-white block">+91 64548 54856</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assest/js/main.js"></script>
+    <!-- JS -->
+  </body>
+</html>
