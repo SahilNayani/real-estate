@@ -38,4 +38,8 @@ p.exsmall {@apply text-[13px] leading-5 font-medium ;}
 .drop_titel{@apply text-lg lg:text-xl xl:text-[22px] text-darkgray mb-2 flex items-center;}
 .drop_link{@apply text-sm sm:text-base lg:text-lg block p-2 px-4 text-black/80 rounded-lg;}
 .drop_link.active{@apply bg-ligthgray;}
+
+/* proprty card  */
+.proprty_tabs .tab_link{@apply inline-block text-gray text-lg lg:text-xl font-medium pb-2 px-2;}
+.proprty_tabs .tab_link.active{@apply text-sky border-b border-sky;}
 @tailwind utilities;
