@@ -22,7 +22,7 @@ h1,.h1 {@apply font-normal text-4xl md:text-5xl lg:text-6xl xl:text-68 2xl:text-
 h2,.h2 {@apply font-normal text-3xl lg:text-6xl 2xl:text-7xl;}
 h3,.h3 {@apply font-normal text-4xl lg:text-5xl 2xl:text-64;}
 h4,.h4{@apply font-normal text-40 lg:text-[46px] 2xl:text-52;}
-h5,.h5{@apply font-normal text-xl md:text-2xl lg:text-3xl 2xl:text-4xl;}
+h5,.h5{@apply font-normal text-2xl lg:text-3xl 2xl:text-4xl;}
 
 /* Paragraphs */
 p {@apply font-normal md:font-normal text-xs md:text-base xl:text-lg;}
@@ -33,13 +33,22 @@ p.exsmall {@apply text-[13px] leading-5 font-medium ;}
 
 /* Button */
 .btn-primary {@apply bg-sky text-white border border-sky font-inter text-base lg:text-lg 2xl:text-2xl rounded-full p-2 px-5 inline-block text-center hover:text-sky hover:bg-transparent transition-all duration-300;}
+.btn-secondary {@apply bg-white text-sky border border-sky font-inter text-base lg:text-lg 2xl:text-2xl rounded-full p-2 px-5 inline-block text-center hover:text-white hover:bg-sky transition-all duration-300;}
 
 /* faqs  */
 .drop_titel{@apply text-lg lg:text-xl xl:text-[22px] text-darkgray mb-2 flex items-center;}
 .drop_link{@apply text-sm sm:text-base lg:text-lg block p-2 px-4 text-black/80 rounded-lg;}
 .drop_link.active{@apply bg-ligthgray;}
 
-/* proprty card  */
+/* proprty card & home page-5  */
 .proprty_tabs .tab_link{@apply inline-block text-gray text-lg lg:text-xl font-medium pb-2 px-2;}
-.proprty_tabs .tab_link.active{@apply text-sky border-b border-sky;}
+.submenu_list .sub_link{@apply inline-block text-base md:text-lg xl:text-xl font-inter text-darkgray p-2 font-medium;}
+.proprty_tabs .tab_link.active, .submenu_list .sub_link.active{@apply text-sky border-b border-sky;}
+
+/* stap-bar  */
+.stap_bar{@apply relative z-10 flex flex-wrap;}
+.stap_bar .progress_line{@apply absolute w-full h-0.5 bg-sky left-1/2 top-2.5;}
+.stap_bar .stap-item{@apply w-1/3 p-2 space-y-2 flex flex-col relative;}
+.stap-item .stap-no{@apply h-6 w-6 rounded-full border-2 border-sky text-center text-xs sm:text-base mx-auto font-bold flex items-center justify-center text-sky bg-white relative z-10;}
+.stap-item.active .stap-no{@apply bg-sky text-white;}
 @tailwind utilities;
