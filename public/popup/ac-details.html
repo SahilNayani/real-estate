@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate Account Details</title>    
+    <!-- Aos Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- Style -->
+    <link rel="stylesheet" href="../assest/css/style.css" />
+  </head>
+
+  <body>
+    <div class="w-full h-full fixed inset-0 bg-black/10 px-5 py-8 sm:p-8 overflow-y-auto">
+        <div class="max-w-screen-2xl mx-auto bg-white p-8 sm:p-10 lg:p-14 xl:p-20 rounded-2xl flex flex-wrap relative">
+            <div class="w-full lg:w-5/12 lg:absolute bottom-0 right-10 pb-10 lg:order-2 lg:pb-0">
+                <img src="../assest/images/svg/popup-bg.svg" class="max-w-full sm:max-w-full mx-auto lg:mr-0 lg:ml-auto" alt="popup-bg"/>
+            </div>
+            <div class="w-full lg:w-7/12 lg:order-1">
+                <h1 class="text-navyblue">Setup <span class="text-sky">Account</span></h1>
+                <div class="relative p-3.5 rounded-full overflow-hidden bg-ligthoffgray w-full max-w-xl mt-2">
+                    <span class="h-full w-8/12 bg-sky absolute left-0 inset-y-0 text-white font-bold flex items-center justify-center">70%</span>
+                </div>
+                <div class="max-w-xl mt-3">
+                    <ul class="stap_bar">
+                        <li class="stap-item active">
+                            <span class="stap-no"> 1 </span>
+                            <span class="progress_line"></span>
+                            <span class="text-[10px] sm:text-sm text-navyblue block text-center uppercase">upload documents</span>
+                        </li>
+                        <li class="stap-item active">
+                            <span class="stap-no"> 2 </span>
+                            <span class="progress_line"></span>
+                            <span class="text-[10px] sm:text-sm text-navyblue block text-center uppercase">account details</span>
+                        </li>
+                        <li class="stap-item">
+                            <span class="stap-no"> 3 </span>
+                            <span class="text-[10px] sm:text-sm text-navyblue block text-center uppercase">Validation</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="w-full mt-5 space-y-5">
+                    <h5 class="block font-inter text-navyblue font-light">Account Information</h5>
+                    <form action="" method="post" class="space-y-4">
+                        <input type="text" class="border border-ligthoffgray w-full px-5 py-2 lg:py-3 rounded-md max-w-xl outline-none" placeholder="Bank Name" name="Bank Name" id=""/>
+                        <input type="text" class="border border-ligthoffgray w-full px-5 py-2 lg:py-3 rounded-md max-w-xl outline-none" placeholder="Account Name" name="Account Name" id=""/>
+                        <input type="text" class="border border-ligthoffgray w-full px-5 py-2 lg:py-3 rounded-md max-w-xl outline-none" placeholder="Account Number" name="Account Number" id=""/>
+                        <input type="text" class="border border-ligthoffgray w-full px-5 py-2 lg:py-3 rounded-md max-w-xl outline-none" placeholder="Re-enter Account Number" name="Re-enter Account Number" id=""/>
+                        <input type="text" class="border border-ligthoffgray w-full px-5 py-2 lg:py-3 rounded-md max-w-xl outline-none" placeholder="IFSC Code" name="IFSC Code" id=""/>
+                        <div class="w-full">
+                            <a href="" class="btn-primary rounded text-base lg:text-lg">Submit</a>
+                        </div>
+                    </form>
+                </div>
+            </div>            
+        </div>
+    </div>
+  </body>
+</html>
