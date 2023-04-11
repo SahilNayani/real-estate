@@ -29,7 +29,7 @@ p {@apply font-normal md:font-normal text-xs md:text-base xl:text-lg;}
 p.exsmall {@apply text-[13px] leading-5 font-medium ;}
 
 /* Wrapper */
-.wrapper {@apply max-w-screen-xl mx-auto px-3.5 md:px-5 xl:px-8 2xl:px-10;}
+.wrapper {@apply max-w-screen-2xl mx-auto px-5 lg:px-8 2xl:px-32;}
 
 /* Button */
 .btn-primary {@apply bg-sky text-white border border-sky font-inter text-base lg:text-lg 2xl:text-2xl rounded-full p-2 px-5 inline-block text-center hover:text-sky hover:bg-transparent transition-all duration-300;}
