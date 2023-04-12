@@ -51,4 +51,11 @@ p.exsmall {@apply text-[13px] leading-5 font-medium ;}
 .stap_bar .stap-item{@apply w-1/3 p-2 space-y-2 flex flex-col relative;}
 .stap-item .stap-no{@apply h-6 w-6 rounded-full border-2 border-sky text-center text-xs sm:text-base mx-auto font-bold flex items-center justify-center text-sky bg-white relative z-10;}
 .stap-item.active .stap-no{@apply bg-sky text-white;}
+
+
+/* chartjs  */
+  span.chart-legend{@apply w-3.5 h-3.5 rounded-full inline-block;}
+  div#my-legend-con ul li{@apply flex items-center space-x-10;}
+  div#my-legend-con ul{@apply space-y-3;}
+
 @tailwind utilities;
