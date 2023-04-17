@@ -32,7 +32,7 @@ p.exsmall {@apply text-[13px] leading-5 font-medium ;}
 .wrapper {@apply max-w-screen-2xl mx-auto px-5 lg:px-8 2xl:px-32;}
 
 /* Button */
-.btn-primary {@apply bg-sky text-white border border-sky font-inter text-base lg:text-lg 2xl:text-2xl rounded-full p-2 px-5 inline-block text-center hover:text-sky hover:bg-transparent transition-all duration-300;}
+.btn-primary {@apply bg-sky text-white border border-sky font-inter text-base lg:text-lg 2xl:text-2xl rounded-full p-3 lg:p-5 inline-block text-center hover:text-sky hover:bg-transparent transition-all duration-300;}
 .btn-secondary {@apply bg-white text-sky border border-sky font-inter text-base lg:text-lg 2xl:text-2xl rounded-full p-2 px-5 inline-block text-center hover:text-white hover:bg-sky transition-all duration-300;}
 
 /* faqs  */
@@ -53,9 +53,5 @@ p.exsmall {@apply text-[13px] leading-5 font-medium ;}
 .stap-item.active .stap-no{@apply bg-sky text-white;}
 
 
-/* chartjs  */
-  span.chart-legend{@apply w-3.5 h-3.5 rounded-full inline-block;}
-  div#my-legend-con ul li{@apply flex items-center space-x-10;}
-  div#my-legend-con ul{@apply space-y-3;}
 
 @tailwind utilities;

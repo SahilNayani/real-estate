@@ -100,10 +100,7 @@
           <div class="w-full md:w-1/2 p-3">
             <h5 class="block font-inter text-gray font-light mb-8 xl:mb-11">Cost</h5>
             <div class="flex items-center">
-              <div class="canvas-con-inner">
-                  <canvas id="mychart"></canvas>
-              </div>
-              <div id="my-legend-con" class="legend-con"></div>
+              <div style="width: 800px;"><canvas id="acquisitions"></canvas></div>
             </div>
           </div>
           <div class="w-full md:w-1/2 p-3">
@@ -321,98 +318,23 @@
     <!-- JS -->
     <!-- chart js  -->
     <script>
-      Chart.pluginService.register({
-          beforeDraw: function (chart) {
-              var width = chart.chart.width,
-                  height = chart.chart.height,
-                  ctx = chart.chart.ctx;
-              ctx.restore();
-              var fontSize = (height / 114).toFixed(2);
-              ctx.font = fontSize + "em sans-serif";
-              ctx.textBaseline = "middle";
-              var text = chart.config.options.elements.center.text,
-                  textX = Math.round((width - ctx.measureText(text).width) / 2),
-                  textY = height / 2;
-              ctx.fillText(text, textX, textY);
-              ctx.save();
-          }
-      });
-
-      var chartData = [{"visitor": 39, "visit": 1}, {"visitor": 18, "visit": 2}, {"visitor": 9, "visit": 3}, {"visitor": 5, "visit": 4}, {"visitor": 6, "visit": 5}, {"visitor": 5, "visit": 6}, {"visitor": 98, "visit": 6}]
-
-      var visitorData = [],
-          sum = 0,
-          visitData = [];
-
-      for (var i = 0; i < chartData.length; i++) {
-          visitorData.push(chartData[i]['visitor'])
-          visitData.push(chartData[i]['visit'])
-        
-          sum += chartData[i]['visitor'];
-      }
-
-      var textInside = sum.toString();
-
-      var myChart = new Chart(document.getElementById('mychart'), {
-          type: 'doughnut',
-          animation:{
-              animateScale:true
-          },
-          data: {
-              labels: visitData,
-              datasets: [{
-                  label: 'Visitor',
-                  data: visitorData,
-                  backgroundColor: [
-                      "#a2d6c4",
-                      "#36A2EB",
-                      "#3e8787",
-                      "#579aac",
-                      "#7dcfe8",
-                      "#b3dfe7",
-                      "#CDDC39"
-                  ]
-              }]
-          },
-          options: {
-              elements: {
-                center: {
-                  text: textInside
-                }
-              },
-              responsive: true,
-              legend: false,
-              legendCallback: function(chart) {
-                  var legendHtml = [];
-                  legendHtml.push('<ul>');
-                  var item = chart.data.datasets[0];
-                  for (var i=0; i < item.data.length; i++) {
-                      legendHtml.push('<li>');
-                      legendHtml.push('<span class="chart-legend" style="background-color:' + item.backgroundColor[i] +'"></span>');
-                      legendHtml.push('<span class="chart-legend-label-text">' + item.data[i] + ' person - '+chart.data.labels[i]+' times</span>');
-                      legendHtml.push('</li>');
-                  }
-
-                  legendHtml.push('</ul>');
-                  return legendHtml.join("");
-              },
-              tooltips: {
-                  enabled: true,
-                  mode: 'label',
-                  callbacks: {
-                      label: function(tooltipItem, data) {
-                          var indice = tooltipItem.index;
-                          return data.datasets[0].data[indice] + " person visited " + data.labels[indice] + ' times';
-                      }
-                  }
-              },
-          }
-      });
-
-      $('#my-legend-con').html(myChart.generateLegend());
-
-      console.log(document.getElementById('my-legend-con'));
-
+        const data = {
+        labels: [
+          'Red',
+          'Blue',
+          'Yellow'
+        ],
+        datasets: [{
+          label: 'My First Dataset',
+          data: [300, 50, 100],
+          backgroundColor: [
+            'rgb(255, 99, 132)',
+            'rgb(54, 162, 235)',
+            'rgb(255, 205, 86)'
+          ],
+          hoverOffset: 4
+        }]
+      };
     </script>
   </body>
 </html>
