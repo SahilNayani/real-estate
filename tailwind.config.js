@@ -2,20 +2,19 @@ module.exports = {
   content: ["./public/**/*.{html,js,scss}"],
   theme: {
     screens: {
-      'sm'   : '640px',
-      'md'   : '768px',
-      'lg'   : '1024px',
-      'xl'   : '1280px',
-      '2xl'  : '1536px',
-      '2k'   : '1920px',
-      'cont' : '2050px',
-      '4k'   : '2560px',
+      'sm': '640px',
+      'md': '768px',
+      'lg': '1024px',
+      'xl': '1280px',
+      '2xl': '1536px',
+      '2k': '1920px',
+      '4k': '2560px',
     },
     fontFamily: {
-      inter:   ['Inter', 'sans-serif'],
-      dm:      ['DM Serif Display', 'sans-serif'],
-      pbsans:  ['Public Sans', 'sans-serif'],
-      redhot:  ['Red Hat Display', 'sans-serif'],
+      inter: ['Inter', 'sans-serif'],
+      dm: ['DM Serif Display', 'sans-serif'],
+      pbsans: ['Public Sans', 'sans-serif'],
+      redhot: ['Red Hat Display', 'sans-serif'],
       primary: ['Montserrat', 'sans-serif']
     },
     extend: {
