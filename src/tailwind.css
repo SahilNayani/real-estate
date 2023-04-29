@@ -9,6 +9,7 @@
 /* font-family: 'Nunito Sans', sans-serif;
 font-family: 'Poppins', sans-serif; */
 
+body, html{@apply overflow-x-hidden;}
 body{@apply font-primary text-navyblue bg-white;}
 
 /* ANim */
@@ -32,7 +33,7 @@ p.exsmall {@apply text-[13px] leading-5 font-medium ;}
 .btn-primary {@apply bg-sky text-white border border-sky font-inter text-base lg:text-lg 2xl:text-2xl rounded-full p-2 px-5 inline-block text-center hover:text-sky hover:bg-transparent transition-all duration-300;}
 
 /* about us  */
-.au_card{@apply w-full rounded-md bg-white drop-shadow-lg p-3 sm:p-5 xl:px-7 min-h-[120px] 2xl:min-h-[150px] flex flex-col justify-center items-center;}
-.au_text{@apply text-xs sm:text-sm xl:text-base 2xl:text-lg text-black font-inter text-center max-w-[220px] mx-auto invisible opacity-0 h-0 align-top group-hover:h-auto group-hover:opacity-100 group-hover:visible group-hover:text-sky group-hover:pt-4;}
+.au_card{@apply relative w-full rounded-md bg-white drop-shadow-lg p-3 sm:p-5 xl:px-7 h-[120px] 2xl:h-[150px] flex flex-col;}
+.au_text{@apply text-xs sm:text-sm xl:text-base 2xl:text-lg text-black font-inter text-center max-w-[220px] mx-auto lg:invisible lg:opacity-0 align-top group-hover:h-auto group-hover:opacity-100 group-hover:visible group-hover:text-sky;}
 
 @tailwind utilities;
