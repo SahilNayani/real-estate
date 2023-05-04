@@ -34,16 +34,16 @@ p.exsmall {@apply text-[13px] leading-5 font-medium ;}
 
 /* about us  */
 .au_card{@apply relative w-full rounded-md bg-white drop-shadow-lg p-3 sm:p-5 xl:px-7 h-[120px] 2xl:h-[150px] flex flex-col;}
-.au_text{@apply text-xs sm:text-sm xl:text-base 2xl:text-lg text-black font-inter text-center max-w-[220px] mx-auto lg:invisible lg:opacity-0 align-top group-hover:h-auto group-hover:opacity-100 group-hover:visible group-hover:text-sky;}
+.au_text{@apply capitalize text-xs sm:text-sm xl:text-base 2xl:text-lg text-black font-inter text-center max-w-[220px] mx-auto lg:invisible lg:opacity-0 align-top group-hover:h-auto group-hover:opacity-100 group-hover:visible group-hover:text-sky;}
 
 /* @media xl {    */
-    .commercialBox.hideBox {
-        width: 0;
-        overflow: hidden;
-    }
-    .commercialBox {
-        width: 100%;
-    }
+.commercialBox.hideBox {@apply w-0 h-0 lg:h-auto scale-x-0 origin-left overflow-hidden;}
+.commercialBox {@apply w-full;}
+#commercial_box.active .clickBox1, #commercial_box.active .clickBox2, #commercial_box.active .clickBox4 {@apply opacity-50;}
+#commercial_box.active .clickBox1 .com_img, #commercial_box.active .clickBox2 .com_img, #commercial_box.active .clickBox4 .com_img{@apply scale-75 transition-all;}
+#commercial_box.active .clickBox3 .com_img .circale_das{@apply scale-100;}
+    
 /* } */
+
 
 @tailwind utilities;

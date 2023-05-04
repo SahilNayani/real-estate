@@ -11,14 +11,14 @@ function removeClass(IdName, className){
   element.classList.remove(className);
 }
 
-function commercialBox(IdName, className){
-  const boxes = document.getElementsByClassName('commercialBox');
-  for (const box of boxes) {
-    box.classList.add('hideBox');
-  }
-  var element = document.querySelector(IdName);
-  element.classList.remove(className);
-}
+// function commercialBox(IdName, className){
+//   const boxes = document.getElementsByClassName('commercialBox');
+//   for (const box of boxes) {
+//     box.classList.add('hideBox');
+//   }
+//   var element = document.querySelector(IdName);
+//   element.classList.remove(className);
+// }
 
 // $(document).ready(function(){
 //   var boxWidth = $(".commercialBox").width();
