@@ -34,7 +34,7 @@ p.exsmall {@apply text-[13px] leading-5 font-medium ;}
 
 /* about us  */
 .au_card{@apply relative w-full rounded-md bg-white drop-shadow-lg p-3 sm:p-5 xl:px-7 h-[120px] 2xl:h-[150px] flex flex-col;}
-.au_text{@apply capitalize text-xs sm:text-sm xl:text-base 2xl:text-lg text-black font-inter text-center max-w-[220px] mx-auto lg:invisible lg:opacity-0 align-top group-hover:h-auto group-hover:opacity-100 group-hover:visible group-hover:text-sky;}
+.au_text{@apply capitalize text-xs sm:text-sm xl:text-base 2xl:text-lg text-black font-inter text-center max-w-[220px] mx-auto opacity-0 group-hover:opacity-100 group-hover:text-sky;}
 
 /* @media xl {    */
 .commercialBox.hideBox {@apply w-0 h-0 lg:h-auto scale-x-0 origin-left overflow-hidden;}
@@ -45,6 +45,54 @@ p.exsmall {@apply text-[13px] leading-5 font-medium ;}
 #commercial_box.active .clickBox3 .com_img .circale_das{@apply scale-100;}
 #commercial_box.active .downBox {@apply h-72;}
 #commercial_box.active .clBox {@apply w-96;}
+
+
+.flip-box {
+  @apply h-64 md:h-96;
+  perspective: 1000px;
+  width: 100%;
+}
+
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-box-front, .flip-box-back {
+  /* position: absolute; */
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-box-front {
+  background-color: #fff;
+  color: black;
+  border-radius: 10px;
+}
+
+.flip-box-front img
+{
+  height: 50px;
+  width: 50px;
+}
+
+.flip-box-back {
+  background-color: #ffffff;
+  color: #000;
+  transform: rotateY(180deg);
+  border-radius: 10px;
+  padding: 16px;
+}
     
 /* } */
 
