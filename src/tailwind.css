@@ -96,5 +96,9 @@ p.exsmall {@apply text-[13px] leading-5 font-medium ;}
     
 /* } */
 
-
+/* kyc5 process  */
+.complete .c_process, .pandding .process{@apply opacity-100;}
+.pandding span:first-child{@apply bg-sky/20 border-sky/20;}
+.pandding span:first-child svg path{@apply fill-sky stroke-sky;}
+.pandding span{@apply text-black;}
 @tailwind utilities;
