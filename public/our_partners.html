@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>our partners</title>    
+    <!-- Aos Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- Style -->
+    <link rel="stylesheet" href="assest/css/style.css" />
+  </head>
+
+  <body class="w-full bg-offwhite overflow-x-hidden">
+
+    <section class="relative overflow-x-hidden py-10 lg:py-14 xl:py-24 2xl:py-28 overflow-hidden bg-white">
+      <div class="relative max-w-[1640px] mx-auto">
+        <div class="w-full md:w-5/12 mr-auto md:absolute inset-0 flex items-center md:order-2 px-5">
+          <div class="relative z-20">
+            <img src="assest/images/svg/sec2_bg.svg" class="max-w-full aos-init aos-animate" alt="Image 2" data-aos="fade-right">
+          </div>
+        </div>
+        <div class="wrapper flex flex-wrap items-center md:order-1">
+          <div class="w-auto max-w-full md:w-7/12 px-5 py-7 ml-auto">
+            <div class="flex flex-wrap max-w-3xl mr-auto pt-8 lg:pt-0">
+              <div class="title w-full mb-3">
+                <h4 class="font-dm aos-init aos-animate" data-aos="fade-left">our partners <span class="text-sky aos-init aos-animate" data-aos="fade-up"> don’t believe us, believe them</span></h4>
+              </div>
+              <div class="w-1/2 flex flex-col items-start py-3 lg:py-5 pr-3 space-y-2 aos-init aos-animate" data-aos-duration="500" data-aos="fade-up">
+                <img class="w-14 lg:w-16 2xl:w-[90px]" src="assest/images/icon/heand.svg" alt="">
+                <p>Escrow</p>
+              </div>
+              <div class="w-1/2 flex flex-col items-start py-3 lg:py-5 pr-3 space-y-2 aos-init aos-animate" data-aos-duration="700" data-aos="fade-up">
+                <img class="w-14 lg:w-16 2xl:w-[90px]" src="assest/images/icon/Investments-mony.svg" alt="Investments-mony">
+                <p>Legal</p>
+              </div>
+              <div class="w-1/2 flex flex-col items-start py-3 lg:py-5 pr-3 space-y-2 aos-init aos-animate" data-aos-duration="900" data-aos="fade-up">
+                <img class="w-14 lg:w-16 2xl:w-[90px]" src="assest/images/icon/high-liquidity.svg" alt="high-liquidity">
+                <p>Trustee</p>
+              </div>
+              <div class="w-1/2 flex flex-col items-start py-3 lg:py-5 pr-3 space-y-2 aos-init aos-animate" data-aos-duration="1100" data-aos="fade-up">
+                <img class="w-14 lg:w-16 2xl:w-[90px]" src="assest/images/icon/search-mony.svg" alt="search-mony">
+                <p>Diligence And Valuation</p>
+              </div>
+              <div class="w-1/2 flex flex-col items-start py-3 lg:py-5 pr-3 space-y-2 aos-init" data-aos-duration="1300" data-aos="fade-up">
+                <img class="w-14 lg:w-16 2xl:w-[90px]" src="assest/images/icon/mony-protected.svg" alt="mony-protected">
+                <p>KYC</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assest/js/main.js"></script>
+    <script>
+      // Show the first tab and hide the rest
+      $('#tabs-nav .tab_link:first-child').addClass('active');
+      $('.tab-content').hide();
+      $('.tab-content:first').show();
+
+      // Click function
+      $('#tabs-nav .tab_link').click(function(){
+        $('#tabs-nav .tab_link').removeClass('active');
+        $(this).addClass('active');
+        $('.tab-content').hide();
+        
+        var activeTab = $(this).find('a').attr('href');
+        $(activeTab).fadeIn();
+        return false;
+      });
+    </script>
+    <!-- JS -->
+  </body>
+</html>
