@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Real Estate</title>    
+    <title>Real Estate</title>
     <!-- Aos Animation -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <!-- Style -->
@@ -12,27 +12,82 @@
   </head>
 
   <body class="w-full bg-offwhite overflow-x-hidden">
+
+    <!-- after login -->
     <header class="relative" aria-label="Site Header">
-      <div class="flex items-center max-w-screen-2xl mx-auto px-5 py-5 lg:py-8">
+      <div class="flex items-center max-w-[1640px] mx-auto  p-5 lg:p-8">
         <a class="block text-teal-600" href="index.html">
           <img src="assest/images/svg/logo.svg" class="h-9 md:h-14" alt="logo"/>
         </a>
         <div class="flex items-center ml-auto space-x-4">
           <nav aria-label="Site Nav" id="navbar" class="fixed lg:relative inset-0 -translate-x-full lg:translate-x-0 hidden- lg:block bg-offwhite lg:bg-transparent z-50 shadow-md lg:shadow-none transition-all duration-300">
             <ul class="flex flex-col lg:flex-row items-center space-y-2 lg:space-y-0 lg:space-x-4 py-24 lg:py-0 z-50">
-              <li><a class="block text-base xl:text-lg text-navyblue font-inter px-5 xl:px-6 py-2 rounded-full hover:bg-sky hover:text-white anim" href="#">Properties</a></li>
-              <li><a class="block text-base xl:text-lg text-navyblue font-inter px-5 xl:px-6 py-2 rounded-full hover:bg-sky hover:text-white anim" href="#">How it Works</a></li>
-              <li><a class="block text-base xl:text-lg text-navyblue font-inter px-5 xl:px-6 py-2 rounded-full hover:bg-sky hover:text-white anim" href="#">About Us</a></li>
-              <li><a class="block text-base xl:text-lg text-navyblue font-inter px-5 xl:px-6 py-2 rounded-full hover:bg-sky hover:text-white anim" href="#">Invest Now</a></li>
+              <li><a class="block text-base xl:text-lg text-navyblue hover:text-sky px-5 xl:px-6 py-2 rounded-full whitespace-nowrap anim" href="properties.html" onclick="removeClass('#navbar', 'translate-x-0');">Properties</a></li>
+              <li><a class="block text-base xl:text-lg text-navyblue hover:text-sky px-5 xl:px-6 py-2 rounded-full whitespace-nowrap anim" href="how-it-work.html" onclick="removeClass('#navbar', 'translate-x-0');">How it Works</a></li>
+              <li class="relative group">
+                <a class="block text-base xl:text-lg text-navyblue hover:text-sky px-5 xl:px-6 py-2 rounded-full whitespace-nowrap anim" href="javascript:void(0);">Know more</a>
+                <div class="w-full min-w-[180px] bg-white rounded-md border-2 border-sky px-5 py-3 absolute top-full left-0 translate-y-5 invisible opacity-0 group-hover:opacity-100 group-hover:translate-y-2 group-hover:visible anim">
+                  <span class="inline-block w-7 h-4 border-l-2 border-t-2 border-sky -skew-x-6 rotate-[27deg] rounded-tl absolute -top-2.5 left-10 bg-white"></span>
+                  <a href="about-us.html" onclick="removeClass('#navbar', 'translate-x-0');" class="block text-base xl:text-lg text-navyblue hover:text-sky">About us</a>
+                  <a href="faqs.html" onclick="removeClass('#navbar', 'translate-x-0');" class="block text-base xl:text-lg text-navyblue hover:text-sky mt-2">FAQs</a>
+                </div>
+              </li>
+              <li><a class="block text-base xl:text-lg bg-sky text-white border border-sky hover:bg-white hover:text-navyblue font-inter px-5 xl:px-6 py-2 rounded-full whitespace-nowrap anim" href="javascript:void(0);" onclick="removeClass('#navbar', 'translate-x-0');">Invest Now</a></li>
             </ul>
             <button class="absolute right-5 top-5 block lg:hidden" onclick="addClass('#navbar', 'hidden-');removeClass('#navbar', 'translate-x-0')">
               <svg class="h-8 w-8" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16"> <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/> </svg>
             </button>
           </nav>
           <div class="flex items-center gap-4">
-            <div class="sm:flex">
-              <a class="block lg:font-normal text-sm lg:text-base xl:text-xl font-inter rounded px-3 py-1.5 bg-sky text-white border border-sky lg:text-navyblue lg:bg-transparent lg:border-transparent lg:px-5 xl:px-6 lg:py-2 lg:rounded-full lg:hover:bg-sky lg:hover:text-white anim" href="index.html"> Login </a>
-            </div>
+            <!-- <div class="sm:flex">
+              <button onclick="removeClass('#loginPopUp', 'hidden')" class="block lg:font-normal text-sm lg:text-base xl:text-xl font-inter rounded px-3 py-1.5 bg-sky text-white border border-sky lg:text-navyblue lg:bg-transparent lg:border-transparent lg:px-5 xl:px-6 lg:py-2 lg:rounded-full lg:hover:bg-sky lg:hover:text-white anim"> Login </button>
+            </div> -->
+            <button class="block lg:hidden" onclick="removeClass('#navbar', 'hidden-');addClass('#navbar', 'translate-x-0')">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- before login -->
+    <header class="relative hidden" aria-label="Site Header">
+      <div class="flex items-center max-w-[1640px] mx-auto  p-5 lg:p-8">
+        <a class="block text-teal-600" href="index.html">
+          <img src="assest/images/svg/logo.svg" class="h-9 md:h-14" alt="logo"/>
+        </a>
+        <div class="flex items-center ml-auto space-x-4">
+          <nav aria-label="Site Nav" id="navbar" class="fixed lg:relative inset-0 -translate-x-full lg:translate-x-0 hidden- lg:block bg-offwhite lg:bg-transparent z-50 shadow-md lg:shadow-none transition-all duration-300">
+            <ul class="flex flex-col lg:flex-row items-center space-y-2 lg:space-y-0 lg:space-x-4 py-24 lg:py-0 z-50">
+              <li><a class="block text-base xl:text-lg text-navyblue hover:text-sky px-5 xl:px-6 py-2 rounded-full whitespace-nowrap anim" href="#" onclick="removeClass('#navbar', 'translate-x-0');">Properties</a></li>
+              <li><a class="block text-base xl:text-lg text-navyblue hover:text-sky px-5 xl:px-6 py-2 rounded-full whitespace-nowrap anim" href="#" onclick="removeClass('#navbar', 'translate-x-0');">How it Works</a></li>
+              <li class="relative group">
+                <a class="block text-base xl:text-lg text-navyblue hover:text-sky px-5 xl:px-6 py-2 rounded-full whitespace-nowrap anim" href="#" onclick="removeClass('#navbar', 'translate-x-0');">Know more</a>
+                <div class="w-full min-w-[180px] bg-white rounded-md border-2 border-sky px-5 py-3 absolute top-full left-0 translate-y-5 invisible opacity-0 group-hover:opacity-100 group-hover:translate-y-2 group-hover:visible anim">
+                  <span class="inline-block w-7 h-4 border-l-2 border-t-2 border-sky -skew-x-6 rotate-[27deg] rounded-tl absolute -top-2.5 left-10 bg-white"></span>
+                  <a href="#" onclick="removeClass('#navbar', 'translate-x-0');" class="block text-base xl:text-lg text-navyblue hover:text-sky font-inter">about us</a>
+                  <a href="#" onclick="removeClass('#navbar', 'translate-x-0');" class="block text-base xl:text-lg text-navyblue hover:text-sky font-inter mt-2">faqs</a>
+                </div>
+              </li>
+              <li><a class="block text-base xl:text-lg bg-sky text-white border border-sky hover:bg-white hover:text-navyblue font-inter px-5 xl:px-6 py-2 rounded-full whitespace-nowrap anim" href="#" onclick="removeClass('#navbar', 'translate-x-0');">Dashboard</a></li>
+              <li class="">
+                <a class="flex items-center text-base xl:text-lg text-navyblue hover:text-sky pl-5 xl:pl-6 py-2 rounded-full anim" href="#" onclick="removeClass('#navbar', 'translate-x-0');">
+                  Name
+                  <div class="w-12 h-12 p-2.5 rounded-full border border-black/30 ml-2">
+                    <svg class="w-full h-full ml-0.5" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 512 512.002" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M210.352 246.633c33.882 0 63.222-12.153 87.195-36.13 23.973-23.972 36.125-53.304 36.125-87.19 0-33.876-12.152-63.211-36.129-87.192C273.566 12.152 244.23 0 210.352 0c-33.887 0-63.22 12.152-87.192 36.125s-36.129 53.309-36.129 87.188c0 33.886 12.156 63.222 36.133 87.195 23.977 23.969 53.313 36.125 87.188 36.125zM426.129 393.703c-.692-9.976-2.09-20.86-4.149-32.351-2.078-11.579-4.753-22.524-7.957-32.528-3.308-10.34-7.808-20.55-13.37-30.336-5.774-10.156-12.555-19-20.165-26.277-7.957-7.613-17.699-13.734-28.965-18.2-11.226-4.44-23.668-6.69-36.976-6.69-5.227 0-10.281 2.144-20.043 8.5a2711.03 2711.03 0 0 1-20.879 13.46c-6.707 4.274-15.793 8.278-27.016 11.903-10.949 3.543-22.066 5.34-33.039 5.34-10.972 0-22.086-1.797-33.047-5.34-11.21-3.622-20.296-7.625-26.996-11.899-7.77-4.965-14.8-9.496-20.898-13.469-9.75-6.355-14.809-8.5-20.035-8.5-13.313 0-25.75 2.254-36.973 6.7-11.258 4.457-21.004 10.578-28.969 18.199-7.605 7.281-14.39 16.12-20.156 26.273-5.558 9.785-10.058 19.992-13.371 30.34-3.2 10.004-5.875 20.945-7.953 32.524-2.059 11.476-3.457 22.363-4.149 32.363A438.821 438.821 0 0 0 0 423.949c0 26.727 8.496 48.363 25.25 64.32 16.547 15.747 38.441 23.735 65.066 23.735h246.532c26.625 0 48.511-7.984 65.062-23.734 16.758-15.946 25.254-37.586 25.254-64.325-.004-10.316-.351-20.492-1.035-30.242zm0 0" fill="#00cec9" data-original="#000000" class=""></path></g></svg>
+                  </div>
+                </a>
+              </li>
+            </ul>
+            <button class="absolute right-5 top-5 block lg:hidden" onclick="addClass('#navbar', 'hidden-');removeClass('#navbar', 'translate-x-0')">
+              <svg class="h-8 w-8" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16"> <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/> </svg>
+            </button>
+          </nav>
+          <div class="flex items-center gap-4">
+            <!-- <div class="sm:flex">
+              <button onclick="removeClass('#loginPopUp', 'hidden')" class="block lg:font-normal text-sm lg:text-base xl:text-xl font-inter rounded px-3 py-1.5 bg-sky text-white border border-sky lg:text-navyblue lg:bg-transparent lg:border-transparent lg:px-5 xl:px-6 lg:py-2 lg:rounded-full lg:hover:bg-sky lg:hover:text-white anim"> Login </button>
+            </div> -->
             <button class="block lg:hidden" onclick="removeClass('#navbar', 'hidden-');addClass('#navbar', 'translate-x-0')">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
@@ -375,59 +430,63 @@
 
     <!-- Footer -->
     <footer class="relative bg-navyblue pb-28 pt-10 lg:py-12 2xl:py-16">
-      <div class="max-w-screen-2xl mx-auto px-5">
+      <div class="wrapper max-w-[1600px]">
         <div class="flex flex-wrap -mx-2 sm:-mx-3">
           <div class="w-full lg:w-3/12 pb-7 p-2 sm:p-3">
-            <a class="block text-teal-600" href="javascrip:void(0)">
+            <a class="block text-teal-600" href="index.html">
               <img src="assest/images/svg/light-logo.svg" class="h-9 md:h-14 mx-auto md:ml-0" alt="Footer-logo"/>
             </a>
             <div class="absolute text-center w-full lg:text-left lg:relative bottom-0 inset-x-0 p-5 lg:p-0">
-              <div class="flex items-center justify-center lg:justify-start space-x-3 mt-8 md:mt-12">
+              <div class="flex items-center justify-center lg:justify-start space-x-3 lg:pl-16 mt-5">
                 <a href="javascript:void(0)" class="text-white hover:text-sky anim">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 md:w-8 md:h-8" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M420 36H92a56 56 0 0 0-56 56v328a56 56 0 0 0 56 56h160.67V292.924h-36.615v-73.23h36.312V186.6c0-29.952 14.268-76.746 77.059-76.746l56.565.227v62.741h-41.078c-6.679 0-16.183 3.326-16.183 17.592v29.285h58.195l-6.68 73.23H325.9V476H420a56 56 0 0 0 56-56V92a56 56 0 0 0-56-56z" class="fill-current" data-original="#000000" class=""></path></g></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M420 36H92a56 56 0 0 0-56 56v328a56 56 0 0 0 56 56h160.67V292.924h-36.615v-73.23h36.312V186.6c0-29.952 14.268-76.746 77.059-76.746l56.565.227v62.741h-41.078c-6.679 0-16.183 3.326-16.183 17.592v29.285h58.195l-6.68 73.23H325.9V476H420a56 56 0 0 0 56-56V92a56 56 0 0 0-56-56z" class="fill-current" data-original="#000000" class=""></path></g></svg>
                 </a>
                 <a href="javascript:void(0)" class="text-white hover:text-sky anim">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 md:w-8 md:h-8" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M512 97.248c-19.04 8.352-39.328 13.888-60.48 16.576 21.76-12.992 38.368-33.408 46.176-58.016-20.288 12.096-42.688 20.64-66.56 25.408C411.872 60.704 384.416 48 354.464 48c-58.112 0-104.896 47.168-104.896 104.992 0 8.32.704 16.32 2.432 23.936-87.264-4.256-164.48-46.08-216.352-109.792-9.056 15.712-14.368 33.696-14.368 53.056 0 36.352 18.72 68.576 46.624 87.232-16.864-.32-33.408-5.216-47.424-12.928v1.152c0 51.008 36.384 93.376 84.096 103.136-8.544 2.336-17.856 3.456-27.52 3.456-6.72 0-13.504-.384-19.872-1.792 13.6 41.568 52.192 72.128 98.08 73.12-35.712 27.936-81.056 44.768-130.144 44.768-8.608 0-16.864-.384-25.12-1.44C46.496 446.88 101.6 464 161.024 464c193.152 0 298.752-160 298.752-298.688 0-4.64-.16-9.12-.384-13.568 20.832-14.784 38.336-33.248 52.608-54.496z" class="fill-current" data-original="#000000" class=""></path></g></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M512 97.248c-19.04 8.352-39.328 13.888-60.48 16.576 21.76-12.992 38.368-33.408 46.176-58.016-20.288 12.096-42.688 20.64-66.56 25.408C411.872 60.704 384.416 48 354.464 48c-58.112 0-104.896 47.168-104.896 104.992 0 8.32.704 16.32 2.432 23.936-87.264-4.256-164.48-46.08-216.352-109.792-9.056 15.712-14.368 33.696-14.368 53.056 0 36.352 18.72 68.576 46.624 87.232-16.864-.32-33.408-5.216-47.424-12.928v1.152c0 51.008 36.384 93.376 84.096 103.136-8.544 2.336-17.856 3.456-27.52 3.456-6.72 0-13.504-.384-19.872-1.792 13.6 41.568 52.192 72.128 98.08 73.12-35.712 27.936-81.056 44.768-130.144 44.768-8.608 0-16.864-.384-25.12-1.44C46.496 446.88 101.6 464 161.024 464c193.152 0 298.752-160 298.752-298.688 0-4.64-.16-9.12-.384-13.568 20.832-14.784 38.336-33.248 52.608-54.496z" class="fill-current" data-original="#000000" class=""></path></g></svg>
                 </a>
                 <a href="javascript:void(0)" class="text-white hover:text-sky anim">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 md:w-8 md:h-8" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 510 510" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M459 0H51C22.95 0 0 22.95 0 51v408c0 28.05 22.95 51 51 51h408c28.05 0 51-22.95 51-51V51c0-28.05-22.95-51-51-51zM153 433.5H76.5V204H153v229.5zm-38.25-272.85c-25.5 0-45.9-20.4-45.9-45.9s20.4-45.9 45.9-45.9 45.9 20.4 45.9 45.9-20.4 45.9-45.9 45.9zM433.5 433.5H357V298.35c0-20.399-17.85-38.25-38.25-38.25s-38.25 17.851-38.25 38.25V433.5H204V204h76.5v30.6c12.75-20.4 40.8-35.7 63.75-35.7 48.45 0 89.25 40.8 89.25 89.25V433.5z" class="fill-current" data-original="#000000" class=""></path></g></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 510 510" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M459 0H51C22.95 0 0 22.95 0 51v408c0 28.05 22.95 51 51 51h408c28.05 0 51-22.95 51-51V51c0-28.05-22.95-51-51-51zM153 433.5H76.5V204H153v229.5zm-38.25-272.85c-25.5 0-45.9-20.4-45.9-45.9s20.4-45.9 45.9-45.9 45.9 20.4 45.9 45.9-20.4 45.9-45.9 45.9zM433.5 433.5H357V298.35c0-20.399-17.85-38.25-38.25-38.25s-38.25 17.851-38.25 38.25V433.5H204V204h76.5v30.6c12.75-20.4 40.8-35.7 63.75-35.7 48.45 0 89.25 40.8 89.25 89.25V433.5z" class="fill-current" data-original="#000000" class=""></path></g></svg>
                 </a>
                 <a href="javascript:void(0)" class="text-white hover:text-sky anim">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 md:w-8 md:h-8" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 511 511.9" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M510.95 150.5c-1.2-27.2-5.598-45.898-11.9-62.102-6.5-17.199-16.5-32.597-29.6-45.398-12.802-13-28.302-23.102-45.302-29.5-16.296-6.3-34.898-10.7-62.097-11.898C334.648.3 325.949 0 256.449 0s-78.199.3-105.5 1.5c-27.199 1.2-45.898 5.602-62.097 11.898-17.204 6.5-32.602 16.5-45.403 29.602-13 12.8-23.097 28.3-29.5 45.3-6.3 16.302-10.699 34.9-11.898 62.098C.75 177.801.449 186.5.449 256s.301 78.2 1.5 105.5c1.2 27.2 5.602 45.898 11.903 62.102 6.5 17.199 16.597 32.597 29.597 45.398 12.801 13 28.301 23.102 45.301 29.5 16.3 6.3 34.898 10.7 62.102 11.898 27.296 1.204 36 1.5 105.5 1.5s78.199-.296 105.5-1.5c27.199-1.199 45.898-5.597 62.097-11.898a130.934 130.934 0 0 0 74.903-74.898c6.296-16.301 10.699-34.903 11.898-62.102 1.2-27.3 1.5-36 1.5-105.5s-.102-78.2-1.3-105.5zm-46.098 209c-1.102 25-5.301 38.5-8.801 47.5-8.602 22.3-26.301 40-48.602 48.602-9 3.5-22.597 7.699-47.5 8.796-27 1.204-35.097 1.5-103.398 1.5s-76.5-.296-103.403-1.5c-25-1.097-38.5-5.296-47.5-8.796C94.551 451.5 84.45 445 76.25 436.5c-8.5-8.3-15-18.3-19.102-29.398-3.5-9-7.699-22.602-8.796-47.5-1.204-27-1.5-35.102-1.5-103.403s.296-76.5 1.5-103.398c1.097-25 5.296-38.5 8.796-47.5C61.25 94.199 67.75 84.1 76.352 75.898c8.296-8.5 18.296-15 29.398-19.097 9-3.5 22.602-7.7 47.5-8.801 27-1.2 35.102-1.5 103.398-1.5 68.403 0 76.5.3 103.403 1.5 25 1.102 38.5 5.3 47.5 8.8 11.097 4.098 21.199 10.598 29.398 19.098 8.5 8.301 15 18.301 19.102 29.403 3.5 9 7.699 22.597 8.8 47.5 1.2 27 1.5 35.097 1.5 103.398s-.3 76.301-1.5 103.301zm0 0" class="fill-current" data-original="#000000" class=""></path><path d="M256.45 124.5c-72.598 0-131.5 58.898-131.5 131.5s58.902 131.5 131.5 131.5c72.6 0 131.5-58.898 131.5-131.5s-58.9-131.5-131.5-131.5zm0 216.8c-47.098 0-85.302-38.198-85.302-85.3s38.204-85.3 85.301-85.3c47.102 0 85.301 38.198 85.301 85.3s-38.2 85.3-85.3 85.3zM423.852 119.3c0 16.954-13.747 30.7-30.704 30.7-16.953 0-30.699-13.746-30.699-30.7 0-16.956 13.746-30.698 30.7-30.698 16.956 0 30.703 13.742 30.703 30.699zm0 0" class="fill-current" data-original="#000000" class=""></path></g></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 511 511.9" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M510.95 150.5c-1.2-27.2-5.598-45.898-11.9-62.102-6.5-17.199-16.5-32.597-29.6-45.398-12.802-13-28.302-23.102-45.302-29.5-16.296-6.3-34.898-10.7-62.097-11.898C334.648.3 325.949 0 256.449 0s-78.199.3-105.5 1.5c-27.199 1.2-45.898 5.602-62.097 11.898-17.204 6.5-32.602 16.5-45.403 29.602-13 12.8-23.097 28.3-29.5 45.3-6.3 16.302-10.699 34.9-11.898 62.098C.75 177.801.449 186.5.449 256s.301 78.2 1.5 105.5c1.2 27.2 5.602 45.898 11.903 62.102 6.5 17.199 16.597 32.597 29.597 45.398 12.801 13 28.301 23.102 45.301 29.5 16.3 6.3 34.898 10.7 62.102 11.898 27.296 1.204 36 1.5 105.5 1.5s78.199-.296 105.5-1.5c27.199-1.199 45.898-5.597 62.097-11.898a130.934 130.934 0 0 0 74.903-74.898c6.296-16.301 10.699-34.903 11.898-62.102 1.2-27.3 1.5-36 1.5-105.5s-.102-78.2-1.3-105.5zm-46.098 209c-1.102 25-5.301 38.5-8.801 47.5-8.602 22.3-26.301 40-48.602 48.602-9 3.5-22.597 7.699-47.5 8.796-27 1.204-35.097 1.5-103.398 1.5s-76.5-.296-103.403-1.5c-25-1.097-38.5-5.296-47.5-8.796C94.551 451.5 84.45 445 76.25 436.5c-8.5-8.3-15-18.3-19.102-29.398-3.5-9-7.699-22.602-8.796-47.5-1.204-27-1.5-35.102-1.5-103.403s.296-76.5 1.5-103.398c1.097-25 5.296-38.5 8.796-47.5C61.25 94.199 67.75 84.1 76.352 75.898c8.296-8.5 18.296-15 29.398-19.097 9-3.5 22.602-7.7 47.5-8.801 27-1.2 35.102-1.5 103.398-1.5 68.403 0 76.5.3 103.403 1.5 25 1.102 38.5 5.3 47.5 8.8 11.097 4.098 21.199 10.598 29.398 19.098 8.5 8.301 15 18.301 19.102 29.403 3.5 9 7.699 22.597 8.8 47.5 1.2 27 1.5 35.097 1.5 103.398s-.3 76.301-1.5 103.301zm0 0" class="fill-current" data-original="#000000" class=""></path><path d="M256.45 124.5c-72.598 0-131.5 58.898-131.5 131.5s58.902 131.5 131.5 131.5c72.6 0 131.5-58.898 131.5-131.5s-58.9-131.5-131.5-131.5zm0 216.8c-47.098 0-85.302-38.198-85.302-85.3s38.204-85.3 85.301-85.3c47.102 0 85.301 38.198 85.301 85.3s-38.2 85.3-85.3 85.3zM423.852 119.3c0 16.954-13.747 30.7-30.704 30.7-16.953 0-30.699-13.746-30.699-30.7 0-16.956 13.746-30.698 30.7-30.698 16.956 0 30.703 13.742 30.703 30.699zm0 0" class="fill-current" data-original="#000000" class=""></path></g></svg>
                 </a>
               </div>
-              <span class="block text-sm md:text-base text-white font-primary mt-4 md:mt-6">© 2023 2GZ</span>
+              <span class="block text-sm 2xl:text-base text-white font-primary mt-4 md:mt-6">2 Gaj Zameen (a division of Solve4x Solutions Private Limited)</span>
+            </div>
+            <div class="space-y-2">
+              <span class="block text-sm 2xl:text-base text-white font-primary mt-4 md:mt-6">GST:</span>
+              <span class="block text-sm 2xl:text-base text-white font-primary mt-4 md:mt-6">CIN:</span>
             </div>
           </div>
           <div class="w-1/2 md:w-1/4 lg:w-2/12 p-2 sm:p-3">
             <h5 class="font-dm text-sky font-normal">Company</h5>
-            <div class="space-y-1 mt-2 md:mt-3">
-              <a href="javascript:void(0)" class="text-xs sm:text-sm lg:text-base text-white block">About Us</a>
-              <a href="javascript:void(0)" class="text-xs sm:text-sm lg:text-base text-white block">Contact</a>
-              <a href="javascript:void(0)" class="text-xs sm:text-sm lg:text-base text-white block">Partner with Us</a>
-              <a href="javascript:void(0)" class="text-xs sm:text-sm lg:text-base text-white block">Blog</a>
-              <a href="javascript:void(0)" class="text-xs sm:text-sm lg:text-base text-white block">Careers</a>
-            </div>
-          </div>
-          <div class="w-1/2 md:w-1/4 lg:w-2/12 p-2 sm:p-3">
-            <h5 class="font-dm text-sky font-normal">Invest</h5>
-            <div class="space-y-1 mt-2 md:mt-3">
-              <a href="javascript:void(0)" class="text-xs sm:text-sm lg:text-base text-white block">Commercial</a>
-              <a href="javascript:void(0)" class="text-xs sm:text-sm lg:text-base text-white block">Shops</a>
+            <div class="space-y-4 mt-2 md:mt-3">
+              <a href="about-us.html" class="text-xs sm:text-sm 2xl:text-base text-white block">About Us</a>
+              <a href="how-it-work.html" class="text-xs sm:text-sm 2xl:text-base text-white block">how it works</a>
+              <a href="faqs.html" class="text-xs sm:text-sm 2xl:text-base text-white block">faqs</a>
+              <a href="#" class="text-xs sm:text-sm 2xl:text-base text-white block">careers</a>
             </div>
           </div>
           <div class="w-1/2 md:w-1/4 lg:w-3/12 p-2 sm:p-3">
+            <h5 class="font-dm text-sky font-normal">Invest</h5>
+            <div class="space-y-4 mt-2 md:mt-3">
+              <a href="tab_holder.html" class="text-xs sm:text-sm 2xl:text-base text-white block">fixed term investments</a>
+              <a href="tab_holder.html" class="text-xs sm:text-sm 2xl:text-base text-white block">variable term investments</a>
+            </div>
+          </div>
+          <div class="w-1/2 md:w-1/4 lg:w-2/12 p-2 sm:p-3">
             <h5 class="font-dm text-sky font-normal">Policies</h5>
-            <div class="space-y-1 mt-2 md:mt-3">
-              <a href="javascript:void(0)" class="text-xs sm:text-sm lg:text-base text-white block">Privacy Policy</a>
-              <a href="javascript:void(0)" class="text-xs sm:text-sm lg:text-base text-white block">Terms and Conditions</a>
-              <a href="javascript:void(0)" class="text-xs sm:text-sm lg:text-base text-white block">Notice of Privacy Practices</a>
+            <div class="space-y-4 mt-2 md:mt-3">
+              <a href="privacy-policy.html" class="text-xs sm:text-sm 2xl:text-base text-white block">privacy policy</a>
+              <a href="terms-and-conditions.html" class="text-xs sm:text-sm 2xl:text-base text-white block">terms and conditions</a>
+              <a href="notice-of-privacy-practices.html" class="text-xs sm:text-sm 2xl:text-base text-white block">notice of privacy practices</a>
             </div>
           </div>          
           <div class="w-1/2 md:w-1/4 lg:w-2/12 p-2 sm:p-3">
             <h5 class="font-dm text-sky font-normal">Contact Us</h5>
-            <div class="space-y-1 mt-2 md:mt-3">
-              <a href="javascript:void(0)" class="text-xs sm:text-sm lg:text-base text-white block">+91 64548 54856</a>
+            <div class="space-y-4 mt-2 md:mt-3">
+              <a href="contect-us.html" class="text-xs sm:text-sm 2xl:text-base text-white block">need help?</a>
+              <a href="our_partners.html" class="text-xs sm:text-sm 2xl:text-base text-white block">partner with us</a>
             </div>
           </div>
         </div>
