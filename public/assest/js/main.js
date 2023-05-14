@@ -40,3 +40,28 @@ AOS.init({
   duration: 800,
   easing: 'ease-in-out-back'
 });
+
+
+$(document).ready(function(){
+	
+	$('ul.tabs .sublink').click(function(){
+		var tab_id = $(this).attr('data-tab');
+
+		$('ul.tabs .sublink').removeClass('current');
+		$('.tabcontent').removeClass('current');
+
+		$(this).addClass('current');
+		$("#"+tab_id).addClass('current');
+	});
+
+  $('ul.tabcontent .underlink').click(function(){
+    var tab_id = $(this).attr('data-tab');
+
+    $('ul.tabcontent .underlink').removeClass('current');
+    $('.tabcontent2').removeClass('current');
+
+    $(this).addClass('current');
+    $("#"+tab_id).addClass('current');
+  });
+
+});

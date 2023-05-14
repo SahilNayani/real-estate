@@ -97,10 +97,30 @@ p.exsmall {@apply text-[13px] leading-5 font-medium ;}
 /* } */
 
 /* kyc5 process  */
-.complete .c_process, .pandding .process{@apply opacity-100;}
-.pandding span:first-child{@apply bg-sky/20 border-sky/20;}
+.complete .c_process,
+.pandding .process{@apply opacity-100;}
+/* .pandding span:first-child{@apply bg-sky/20 border-sky/20;}
 .pandding span:first-child svg path{@apply fill-sky stroke-sky;}
-.pandding span{@apply text-black;}
+.pandding span{@apply text-black;} */
 
-.tab_link.active a{@apply bg-sky text-white border-white;}
+.document.current ~ .document .c_process{@apply opacity-0;}
+.document.current .c_process{@apply opacity-0;}
+.document.current .process{@apply opacity-100;}
+.document.current span:first-child{@apply bg-sky/20 border-sky/20;}
+.document.current span:first-child svg.icon path{@apply fill-sky stroke-sky;}
+.document.current span{@apply text-black;}
+
+.tab_link.active a{@apply bg-sky/20 border-white;}
+
+
+.sublink{@apply text-base lg:text-lg font-semibold text-black/70 cursor-pointer flex items-center py-1;}
+.tabcontent{@apply text-xl font-semibold hidden;}
+.underlink{@apply text-sm lg:text-base font-normal px-3 py-1.5 rounded text-black cursor-pointer;}
+.underlink.current{@apply bg-black/5;}
+
+.tabcontent.current, 
+.tabcontent2.current{@apply block;}
+
+
+.document_details.current{@apply block;}
 @tailwind utilities;
