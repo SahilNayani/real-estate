@@ -38,6 +38,7 @@ function removeClass(IdName, className){
 // Animation
 AOS.init({
   duration: 800,
+  offset: 50,
   easing: 'ease-in-out-back'
 });
 
