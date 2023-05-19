@@ -33,7 +33,7 @@
                   <a href="faqs.html" onclick="removeClass('#navbar', 'translate-x-0');" class="block text-base xl:text-lg text-navyblue hover:text-sky mt-2">FAQs</a>
                 </div>
               </li>
-              <li><a class="block text-base xl:text-lg bg-sky text-white border border-sky hover:bg-white hover:text-navyblue font-inter px-5 xl:px-6 py-2 rounded-full whitespace-nowrap anim" href="javascript:void(0);" onclick="removeClass('#navbar', 'translate-x-0');">Invest Now</a></li>
+              <li><a class="block text-base xl:text-lg bg-sky text-white border border-sky hover:bg-white hover:text-navyblue font-inter px-5 xl:px-6 py-2 rounded-full whitespace-nowrap anim" href="javascript:void(0);" onclick="removeClass('#navbar', 'translate-x-0');removeClass('#loginPopUp', 'hidden')">Invest Now</a></li>
             </ul>
             <button class="absolute right-5 top-5 block lg:hidden" onclick="addClass('#navbar', 'hidden-');removeClass('#navbar', 'translate-x-0')">
               <svg class="h-8 w-8" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16"> <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/> </svg>
@@ -434,17 +434,37 @@
 
     <!-- Login PopUp -->
     <div id="loginPopUp" class="w-full table h-screen fixed inset-0 bg-black/70 px-5 py-8 sm:p-8 overflow-y-auto z-50 hidden">
+      <span class="block absolute inset-0" onclick="addClass('#registerPopUp', 'hidden');addClass('#loginPopUp', 'hidden')"></span>
       <div class="table-cell align-middle lg:align-top lg:pt-20 lg:pr-20 2xl:pt-40 2xl:pr-40">
-        <div class="max-w-lg xl:max-w-[650px] mx-auto lg:mr-0 bg-white p-8 sm:p-10 lg:p-14 xl:p-16 min-h-[450px] md:min-h-[500px] xl:min-h-[600px] rounded-2xl flex flex-col justify-between">
-          <h1 class="text-navyblue text-center mb-8">Login</h1>  
+        <div class="relative z-10 max-w-lg xl:max-w-[650px] mx-auto lg:mr-0 bg-white p-8 sm:p-10 lg:p-14 xl:p-16 min-h-[450px] md:min-h-[500px] xl:min-h-[600px] rounded-2xl flex flex-col justify-between">
+          <h1 class="text-navyblue font-dm text-center mb-8">Login</h1>  
           <form action="" method="post" class="space-y-4">
             <input type="text" class="border border-ligthoffgray w-full px-5 py-2 lg:py-3 rounded-md max-w-xl outline-none" placeholder="Name" name="Name" id=""/>
             <input type="password" class="border border-ligthoffgray w-full px-5 py-2 lg:py-3 rounded-md max-w-xl outline-none" placeholder="Password" name="Password" id=""/>
-            <div class="w-1/2 sm:w-1/3 lg:w-1/5 p-1.5 sm:p-2">
+            <div class="w-1/2 sm:w-1/3 lg:w-1/5 py-1.5 sm:py-2">
               <a href="" class="btn-primary rounded text-base lg:text-lg w-full py-2.5">Submit</a>
             </div>
           </form>
-          <p class="text-base md:text-lg text-gray font-pbsans text-right mt-6 md:mt-10">Already a Member?<a href="" class="text-sky ml-2">Sign In</a></p>
+          <p class="text-base md:text-lg text-gray font-pbsans text-right mt-6 md:mt-10">Already a Member? <a href="javascrip:void();" onclick="removeClass('#registerPopUp', 'hidden');addClass('#loginPopUp', 'hidden')" class="text-sky ml-2">Register</a></p>
+        </div>
+      </div>
+    </div>
+    <!-- Register PopUp -->
+    <div id="registerPopUp" class="w-full table h-screen fixed inset-0 bg-black/70 px-5 py-8 sm:p-8 overflow-y-auto z-50 hidden">
+      <span class="block absolute inset-0" onclick="addClass('#registerPopUp', 'hidden');addClass('#loginPopUp', 'hidden')"></span>
+      <div class="table-cell align-middle lg:align-top lg:pt-20 lg:pr-20 2xl:pt-40 2xl:pr-40">
+        <div class="relative z-10 max-w-lg xl:max-w-[650px] mx-auto lg:mr-0 bg-white p-8 sm:p-10 lg:p-14 xl:p-16 min-h-[450px] md:min-h-[500px] xl:min-h-[600px] rounded-2xl flex flex-col justify-between">
+          <h1 class="text-navyblue font-dm text-center mb-8">Register</h1>  
+          <form action="" method="post" class="space-y-4">
+            <input type="text" class="border border-ligthoffgray w-full px-5 py-2 lg:py-3 rounded-md max-w-xl outline-none" placeholder="Name" name="Name" id="">
+            <input type="text" class="border border-ligthoffgray w-full px-5 py-2 lg:py-3 rounded-md max-w-xl outline-none" placeholder="email" name="email" id="">
+            <input type="password" class="border border-ligthoffgray w-full px-5 py-2 lg:py-3 rounded-md max-w-xl outline-none" placeholder="Password" name="Password" id="">
+            <input type="password" class="border border-ligthoffgray w-full px-5 py-2 lg:py-3 rounded-md max-w-xl outline-none" placeholder="Re-enter Password" name="Re-enter Password" id="">
+            <div class="w-full">
+              <a href="javascrip:void();" class="btn-primary rounded text-base lg:text-lg w-full py-2.5">Submit</a>
+            </div>
+          </form>
+          <p class="text-base md:text-lg text-gray font-pbsans text-right mt-6 md:mt-10">Already a Member?<a href="javascrip:void();" onclick="removeClass('#loginPopUp', 'hidden');addClass('#registerPopUp', 'hidden')" class="text-sky ml-2">Sign In</a></p>
         </div>
       </div>
     </div>
