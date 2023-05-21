@@ -46,6 +46,9 @@ p.exsmall {@apply text-[13px] leading-5 font-medium ;}
 #commercial_box.active .downBox {@apply h-72;}
 #commercial_box.active .clBox {@apply w-96;}
 
+.submenu_list {@apply text-base space-x-5 xl:space-x-10 font-inter;}
+.submenu_list .sub_link {@apply border-b-2 border-transparent py-2 anim;}
+.submenu_list .sub_link:hover, .submenu_list .sub_link.active {@apply text-sky border-sky;}
 
 .flip-box {
   @apply h-64 md:h-96;
@@ -96,6 +99,14 @@ p.exsmall {@apply text-[13px] leading-5 font-medium ;}
     
 /* } */
 
+ tr:nth-child(even) {@apply bg-sky/20;}
+ .proprty-details {@apply cursor-pointer anim;}
+ .proprty-details.active .table-responsive{@apply block;}
+ .proprty-details.active .image{@apply block h-28;}
+ .proprty-details.active table td{@apply p-1;}
+ .proprty-details.active{@apply w-full sm:w-[50%] lg:w-[32.32%] 2xl:w-[25%];}
+ .proprty-details.active p{@apply block;}
+ .proprty-details.active .details-text{@apply flex items-baseline justify-between pb-2;}
 /* kyc5 process  */
 .complete .c_process,
 .pandding .process{@apply opacity-100;}
